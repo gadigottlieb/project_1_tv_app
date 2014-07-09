@@ -1,0 +1,28 @@
+<ol>
+  <% @show.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+  <% end %>
+</ol>
+<%= form_for @show do |f| %>
+
+  <%= f.label :title%>
+  <%= f.text_field :title %><br>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %><br>
+
+  <%= f.label :first_air_date %>
+  <%= f.date_field :first_air_date %><br>
+
+  <%= f.label :plot %>
+  <%= f.text_area :plot %><br>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre %><br>
+
+  <%= f.label :network %>
+  <%= f.text_field :network %><br>
+
+  <%= f.submit %><br>
+
+<% end %>
