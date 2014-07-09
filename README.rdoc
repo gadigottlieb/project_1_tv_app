@@ -1,28 +1,16 @@
-== README
+Project 1 - TV_App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I would like to create a TV app where users can search TV shows, by Title, browse
+through seasons, and even their episodes. I would also like for users to add shows
+to their wish list. Furthermore, I would like for users to be able to comment on
+a show and leave their reviews.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Link to my user board on Trello
+https://trello.com/b/j2BYqKXd/project-1-tv-app
+
+Link to my drawn out ERDs
+https://www.lucidchart.com/documents/edit/af88ad54-c8b6-42f0-a13f-d759ec9f85aa/0
+
+Link to Heroku
+http://tv-talkandshare.herokuapp.com/

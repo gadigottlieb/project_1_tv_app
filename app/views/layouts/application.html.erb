@@ -8,6 +8,17 @@
 </head>
 <body>
 
+    <p>
+  <% if session[:current_user] %>
+    Welcome back, <%= User.find(session[:current_user]).first_name %>! |
+    <%= link_to User.find(session[:current_user]).first_name, user_path(@user) %> |
+    <%= link_to 'Log Out', logout_path %>
+  <% else %>
+    <%= link_to 'Log In', login_path %> |
+    <%= link_to 'Sign Up', new_user_path %>
+  <% end %>
+  </p>
+
 <%= yield %>
 
 </body>
