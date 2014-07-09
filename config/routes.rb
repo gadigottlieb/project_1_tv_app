@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  # Home Route
+  get '/' => 'home#index', as: "home"
 
-  # User Routes
+  # User, Shows Routes
   resources :users, :shows
 
   # Login and Logout Sessions
