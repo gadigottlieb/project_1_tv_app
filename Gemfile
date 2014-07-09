@@ -45,4 +45,10 @@ gem 'themoviedb'
 gem 'httparty'
 
 # pry-rails
-gem 'pry-rails'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers', require: false
+  gem 'pry-rails'
+end
+# rspec gem

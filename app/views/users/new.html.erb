@@ -1,5 +1,7 @@
 <h2>New User</h2>
 
+
+
 <%= form_for @user do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
@@ -26,11 +28,11 @@
   <br>
 
   <%= f.label :birthday %>
-  <%= f.date_field_tag :birthday %>
+  <%= f.date_field :birthday %>
   <br>
 
   <%= f.label :phone %>
-  <%= f.telephone_field_tag :phone %>
+  <%= f.telephone_field :phone %>
 
   <%= f.submit 'Sign Up' %>
 <% end %>

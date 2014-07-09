@@ -1,0 +1,13 @@
+<h2>User Index</h2>
+
+<hr>
+<% @users.each do |user| %>
+    <%= user.username %>
+    <%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %>
+    <%= user.password_digest %>
+    <% if session[:current_user] == user.id %>
+      <%= link_to "Edit", edit_user_path(user) %>
+      <%= link_to "Remove", user_path(user), method: :delete %>
+    <% end %>
+    <hr>
+<% end %>
