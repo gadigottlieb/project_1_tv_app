@@ -1,14 +1,9 @@
 <h2><%= @user.first_name %>'s Information</h2>
 <%= link_to "Edit", edit_user_path(@user) %>
-<h4>Username:</h4>
-  <%= @user.username %>
-<h4>First Name: </h4>
-  <%= @user.first_name %>
-<h4>Last Name: </h4>
-  <%= @user.last_name %>
-<h4>Email Address: </h4>
-  <%= @user.email %>
-<h4>Birthday: </h4>
-  <%= @user.birthday %>
-<h4>Phone Number: </h4>
-  <%= @user.phone %>
+<h4>Username: <%= @user.username %> </h4>
+<h4>First Name: <%= @user.first_name %> </h4>
+<h4>Last Name: <%= @user.last_name %> </h4>
+<h4>Email Address: <%= @user.email %> </h4>
+<h4>Birthday: <%= @user.birthday %></h4>
+<h4>Phone Number: <%= @user.phone %></h4>
+<%= link_to "Favorites", favorites_path(@user) %>

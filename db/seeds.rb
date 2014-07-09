@@ -2,14 +2,14 @@ User.destroy_all
 Show.destroy_all
 Favorite.destroy_all
 
-jim = User.create!(
-  username: "jim",
-  first_name: "Jim",
-  last_name: "Abbot",
+gadi = User.create!(
+  username: "gadspads24",
+  first_name: "Gadi",
+  last_name: "Gottlieb",
   password: "qwerty",
   password_confirmation: "qwerty",
-  email: "jim@hgmail.com",
-  birthday: "2000-01-01",
+  email: "gadigottlieb@gmail.com",
+  birthday: "1990-05-16",
   phone: 7120
 )
 
@@ -26,7 +26,7 @@ bob = User.create!(
 
 curb = Show.create!(
   title: "Curb Your Enthusiasm",
-  image_url: "http://placekitten.com/300/300",
+  image_url: "http://spiritualitv.files.wordpress.com/2013/04/51q8oy0jll-_sx500_.jpg",
   first_air_date: "2001-01-01",
   plot: "Larry David says sorry.",
   genre: "Comedy",
@@ -35,7 +35,7 @@ curb = Show.create!(
 
 got = Show.create!(
   title: "Game of Thrones",
-  image_url: "http://placekitten.com/300/300",
+  image_url: "http://d1mxyp5ceukbya.cloudfront.net/images/game-of-thrones-posters.jpg",
   first_air_date: "2001-11-15",
   plot: "Everybody dies",
   genre: "Fantasy",
@@ -44,7 +44,7 @@ got = Show.create!(
 
 bad = Show.create!(
   title: "Breaking Bad",
-  image_url: "http://placekitten.com/300/300",
+  image_url: "http://www.kino-govno.com/img/42867/Breaking-Bad-Final-Poster.jpg",
   first_air_date: "2016-02-02",
   plot: "Meth dealer",
   genre: "Drama",
@@ -52,13 +52,13 @@ bad = Show.create!(
 )
 
 Favorite.create(
-  user_id: jim.id,
+  user_id: gadi.id,
   show_id: curb.id,
   comment: "Awesome",
   rating: 10
 )
 Favorite.create(
-  user_id: jim.id,
+  user_id: gadi.id,
   show_id: got.id,
   comment: "WTF?",
   rating: 8

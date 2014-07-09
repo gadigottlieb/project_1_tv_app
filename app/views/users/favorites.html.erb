@@ -1,0 +1,9 @@
+<h2><%= "#{@user.first_name} #{@user.last_name}" %>'s Favorite Shows</h2>
+
+<ol>
+  <% @user.shows.each do |user| %>
+    <li>
+        <%= link_to user.title, show_path(@show) %>
+    </li>
+  <% end %>
+</ol>

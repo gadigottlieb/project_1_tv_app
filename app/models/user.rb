@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # need to include relationship for wishlist
 
   validates_presence_of :username, :first_name, :last_name
-  validates_presence_of :email, :phone
+  validates_presence_of :email, :birthday, :phone
   validates_uniqueness_of :username
-  
+
 end
