@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username, :first_name, :last_name
   validates_presence_of :email, :birthday, :phone
-  validates_uniqueness_of :username
+  validates_uniqueness_of :username, :email
 
 end

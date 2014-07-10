@@ -29,10 +29,24 @@ describe User do
                     last_name: "Gottlieb",
                     password: "qwerty",
                     password_confirmation: "qwerty",
-                    email: "gottroni@gmail.com",
+                    email: "ronigott@gmail.com",
                     birthday: "1996-08-19",
                     phone: 7123)
     expect(roni).to have(1).errors_on(:username)
   end
+
+  it "is invalid without a unique email" do
+    gadi.save!
+    roni = User.new(username: "razzledazzle",
+                    first_name: "Roni",
+                    last_name: "Gottlieb",
+                    password: "qwerty",
+                    password_confirmation: "qwerty",
+                    email: "gadigottlieb@gmail.com",
+                    birthday: "1996-08-19",
+                    phone: 7123)
+    expect(roni).to have(1).errors_on(:email)
+  end
+  
 
 end
