@@ -43,6 +43,7 @@ gem 'themoviedb'
 
 # HTTParty
 gem 'httparty'
+gem 'awesome_print'
 
 # pry-rails
 group :development, :test do

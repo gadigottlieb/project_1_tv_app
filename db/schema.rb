@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140709144342) do
     t.string  "password_digest"
     t.string  "email"
     t.date    "birthday"
-    t.integer "phone"
+    t.string "phone"
   end
 
 end

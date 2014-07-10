@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :authorize, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all
+    # @users = User.all
+    redirect_to home_path
   end
 
   def new
@@ -24,11 +25,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def favorites
-    @user = User.find(params[:id])
-    @show = Show.find(params[:id])
-  end
-
   def edit
     @user = User.find(params[:id])
   end
@@ -36,8 +32,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to users_path
+    @user.update(user_params)
+    if @user.save
+      redirect_to user_path(@user)
     else
       render :edit
     end

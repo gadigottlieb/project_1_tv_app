@@ -10,7 +10,7 @@ gadi = User.create!(
   password_confirmation: "qwerty",
   email: "gadigottlieb@gmail.com",
   birthday: "1990-05-16",
-  phone: 7120
+  phone: "7120485545"
 )
 
 bob = User.create!(
@@ -21,7 +21,7 @@ bob = User.create!(
   password_confirmation: "qwerty",
   email: "bob@hgmail.com",
   birthday: "2001-05-01",
-  phone: 7320
+  phone: "7324045426"
 )
 
 curb = Show.create!(

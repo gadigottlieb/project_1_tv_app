@@ -1,0 +1,13 @@
+<%= form_for @favorite do |f| %>
+
+    <%= f.label :show_id, "Title" %>
+    <%= f.select :show_id, options_for_select(@shows.map {|show| [show.title, show.id]}) %>
+
+    <%= f.label :comment  %>
+    <%= f.text_area :comment %>
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+
+    <%= f.submit %>
+<% end %>

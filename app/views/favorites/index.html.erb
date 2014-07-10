@@ -1,0 +1,11 @@
+<h2>Favorite TV Shows</h2>
+<%= link_to "Add Favorite Show", new_favorite_path %>
+<ol>
+  <% @favorites.each do |favorite| %>
+  <li><%= link_to favorite.show.title, favorite_path(favorite) %> </li>
+  <ul>
+      <li><%= favorite.comment %></li>
+      <li> <%= favorite.rating %> </li>
+  </ul>
+    <% end %>
+</ol

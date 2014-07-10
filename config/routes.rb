@@ -3,14 +3,14 @@ Rails.application.routes.draw do
   get '/' => 'home#index', as: "home"
 
   # User, Shows Routes
-  resources :users, :shows
+  resources :users, :shows, :favorites
 
-  get 'users/:id/favorites' => 'users#favorites', as: 'favorites'
+  # get 'users/:id/favorites' => 'users#favorites', as: 'favorites'
 
   # search Themoviedb api
   get 'search' => 'shows#search', as: 'show_search_path'
   post 'add_new' => 'shows#add_new', as: 'new_show_by_id'
-  
+
   # Login and Logout Sessions
   get '/login' => 'sessions#new'
   post '/sessions' => 'sessions#create'

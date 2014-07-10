@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
       t.string :email
       t.date :birthday
-      t.integer :phone
+      t.string :phone
     end
   end
 end
