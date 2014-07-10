@@ -1,6 +1,7 @@
 User.destroy_all
 Show.destroy_all
 Favorite.destroy_all
+Actor.destroy_all
 
 gadi = User.create!(
   username: "gadspads24",
@@ -76,4 +77,19 @@ Favorite.create(
   show_id: bad.id,
   comment: "Meth?",
   rating: 6
+)
+
+curb.actors.push(
+  Actor.create(name: "Larry David", character: "Larry David", profile_path: "http://d1mxyp5ceukbya.cloudfront.net/images/larry-david-hbo-movie.jpg"),
+  Actor.create(name: "Jeff Garlin", character: "Jeff Green", profile_path: "http://ia.media-imdb.com/images/M/MV5BMzY4MDE4OTk2MF5BMl5BanBnXkFtZTcwNjYxMzA2MQ@@._V1_SY317_CR6,0,214,317_AL_.jpg")
+)
+
+got.actors.push(
+  Actor.create(name: "Sean Bean", character: "Eddard Stark", profile_path: "http://www.hollywoodreporter.com/sites/default/files/imagecache/blog_post_349_width/2011/07/gameofthrones14_a_p.jpg"),
+  Actor.create(name: "Jack Gleeson", character: "Joffrey Baratheon", profile_path: "http://static2.hypable.com/wp-content/uploads/2012/08/Game-of-Thrones8.png")
+)
+
+bad.actors.push(
+  Actor.create(name:"Bryan Cranston", character: "Walter White", profile_path: "http://www.nme.com/images/gallery/2013BryanCranstonPA-15479450070213.jpg"),
+  Actor.create(name:"Aaron Paul", character: "Jesse Pinkman", profile_path: "http://ia.media-imdb.com/images/M/MV5BMTY1OTY5NjI5NV5BMl5BanBnXkFtZTcwODA4MjM0OA@@._V1_SX214_CR0,0,214,317_AL_.jpg")
 )

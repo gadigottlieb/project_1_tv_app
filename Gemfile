@@ -53,3 +53,6 @@ group :development, :test do
   gem 'pry-rails'
 end
 # rspec gem
+
+# heroku
+gem 'rails_12factor', group: :production

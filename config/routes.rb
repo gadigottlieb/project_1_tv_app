@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/' => 'home#index', as: "home"
 
   # User, Shows Routes
-  resources :users, :shows, :favorites
+  resources :users, :shows, :favorites, :actors
 
   # get 'users/:id/favorites' => 'users#favorites', as: 'favorites'
 
