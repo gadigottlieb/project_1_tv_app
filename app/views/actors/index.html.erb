@@ -1,0 +1,16 @@
+<%= link_to "Add Actors", new_actor_path %>
+
+<p>
+  Search Actors by the Title of TV Shows:
+</p>
+<%= form_tag "/search", method: :get do %>
+  <%= search_field_tag "search" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+<ol>
+<% @actors.each do |actor| %>
+    <li><%= link_to actor.name, actor_path(actor) %></li>
+<% end %>
+</ol>

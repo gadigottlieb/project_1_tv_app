@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
   # Home Route
-  get '/' => 'home#index', as: "home"
 
   # User, Shows Routes
   resources :users, :shows, :favorites, :actors
 
   # get 'users/:id/favorites' => 'users#favorites', as: 'favorites'
 
-  # search Themoviedb api
-  get 'search' => 'shows#search', as: 'show_search_path'
-  post 'add_new' => 'shows#add_new', as: 'new_show_by_id'
+  # search Themoviedb api for tv shows
+  get 'search' => 'shows#search', as: "shows_search_path"
+  post 'add_new_shows' => 'shows#add_new'
 
+  # search Themoviedb api for actors by shows
+  get 'search' => 'actors#search', as: "actors_search_path"
+  post "add_new_actors" => "actors#add_new"
   # Login and Logout Sessions
-  get '/login' => 'sessions#new'
+
+  get '/' => 'sessions#new', as: :login
   post '/sessions' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 

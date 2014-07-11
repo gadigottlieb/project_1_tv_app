@@ -1,0 +1,7 @@
+<h2>Name: <%= @actor.name %></h2>
+<%= link_to "Edit Actor", edit_actor_path %><br>
+<% @actor.shows.each do |show| %>
+    Show: <h4><%= link_to show.title, show_path(show) %></h4>
+<% end %>
+Character Name: <h4><%=@actor.character %></h4>
+<%= image_tag @actor.profile_path %>

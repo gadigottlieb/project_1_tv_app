@@ -1,0 +1,9 @@
+<h2>TV Show</h2>
+<li><%= title = @results.name %></li>
+<li><%= first_air_date = @results.first_air_date %></li>
+<li><%= plot = @results.overview %></li>
+<li><%= genre = @results.genres[0]["name"] %></li>
+<li><%= network = @results.networks[0]["name"] %></li>
+<% homepage = @results.homepage %>
+<% poster_path = @results.poster_path %>
+<li><%= image_url = image_tag "#{@base_url}/#{@poster_sizes[3]}#{poster_path}" %></li>

@@ -1,6 +1,16 @@
 <h2>TV Shows</h2>
 <%= link_to "Add New TV Show", new_show_path %>
 <%= link_to "Add Favorite Shows", new_favorite_path %>
+
+<p>
+  Search TV Shows By Title:
+</p>
+<%= form_tag "/search", method: :get do %>
+  <%= search_field_tag "search" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
 <ul>
   <% @shows.each do |show| %>
     <li><%= link_to show.title, show_path(show) %> </li>

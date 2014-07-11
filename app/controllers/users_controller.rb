@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     # @users = User.all
-    redirect_to home_path
+    redirect_to login_path
   end
 
   def new
