@@ -6,4 +6,15 @@
 <h4>Email Address: <%= @user.email %> </h4>
 <h4>Birthday: <%= @user.birthday %></h4>
 <h4>Phone Number: <%= @user.phone %></h4>
-<%= link_to "Favorites", favorites_path(@user) %>
+
+<h2>Favorite Shows</h2>
+<%= link_to "Add Favorite Show", new_favorite_path %>
+<ol>
+  <% @user.favorites.each do |favorite| %>
+    <li><%= link_to favorite.show.title, favorite_path(favorite) %></li>
+    <ul>
+      <li><%= favorite.comment %></li>
+      <li><%= favorite.rating %></li>
+    </ul>
+  <% end %>
+</ol>

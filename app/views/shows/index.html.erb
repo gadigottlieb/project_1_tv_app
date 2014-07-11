@@ -1,11 +1,10 @@
 <h2>TV Shows</h2>
 <%= link_to "Add New TV Show", new_show_path %>
 <%= link_to "Add Favorite Shows", new_favorite_path %>
-
 <p>
-  Search TV Shows By Title:
+  Search TV Shows By Title (themoviedb.org):
 </p>
-<%= form_tag "/search", method: :get do %>
+<%= form_tag "shows/search", method: :get do %>
   <%= search_field_tag "search" %>
   <%= submit_tag "Search" %>
 <% end %>

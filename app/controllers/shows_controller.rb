@@ -44,17 +44,10 @@ class ShowsController < ApplicationController
   end
 
   def search
-    @results = TVDB.search_show_title(params[:search]) #&& TVDB.search_actors_show(params[:search])
+    @results = TVDB.search_show_title(params[:search])
     tmdb_config = Tmdb::Configuration.new
     @poster_sizes = tmdb_config.poster_sizes
     @base_url = tmdb_config.base_url
-  end
-
-  def add_new_shows
-    new_show = TVDB.search_show_id(params[:show_id])
-    @show = Show.find_or_create_by(new_show.first)
-
-
   end
 
   private

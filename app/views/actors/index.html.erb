@@ -1,9 +1,9 @@
 <%= link_to "Add Actors", new_actor_path %>
 
 <p>
-  Search Actors by the Title of TV Shows:
+  Search Actors by the Title of TV Shows (themoviedb.org):
 </p>
-<%= form_tag "/search", method: :get do %>
+<%= form_tag "actors/search", method: :get do %>
   <%= search_field_tag "search" %>
   <%= submit_tag "Search" %>
 <% end %>

@@ -1,6 +1,13 @@
 <h2>Actors By TV Show</h2>
 <ol>
-<%= @actor_results.each do |result|%>
-  <li>result</li>
+<% @results.map do |actor|%>
+  <li><strong>Actor:</strong> <%= actor["name"] %></li>
+  <p><strong>Character:</strong>
+    <%= actor["character"] %>
+  </p>
+  <% profile_path = actor["profile_path"] %>
+  <%= image_tag "#{@base_url}/#{@poster_sizes[3]}#{profile_path}" %>
 <% end %>
 </ol>
+
+<%= button_to "Add Actors", new_actor_path %>

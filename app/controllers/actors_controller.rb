@@ -47,7 +47,7 @@ class ActorsController < ApplicationController
   end
 
   def search
-    @actor_results = TVDB.search_actors_show(params[:search])
+    @results = TVDB.search_actors_show(params[:search])
     tmdb_config = Tmdb::Configuration.new
     @poster_sizes = tmdb_config.poster_sizes
     @base_url = tmdb_config.base_url
