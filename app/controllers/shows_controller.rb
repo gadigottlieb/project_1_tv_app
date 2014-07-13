@@ -50,6 +50,14 @@ class ShowsController < ApplicationController
     @base_url = tmdb_config.base_url
   end
 
+  def add_new
+    new_show = TVDB.search_show_title(params[:search])
+    @show = Show.find_or_create_by(new_show.first)
+    if @show.save
+        redirect_to show_path(@show)
+    end
+  end
+
   private
   def show_params
     params.require(:show).permit(:title, :image_url, :first_air_date, :plot, :genre, :network)

@@ -7,7 +7,6 @@
 
 <p>
   <strong>First Air Date:</strong> <%= first_air_date = @results.first_air_date %>
-
 </p>
 
 <p>
@@ -21,5 +20,6 @@
 <p>
   <strong>Network:</strong> <%= network = @results.networks[0]["name"] %>
 </p>
-
-<%= button_to "Add TV Show", new_show_path %>
+<%= form_tag('shows/new', method: :post) do |f| %>
+  <%= button_to "Add TV Show" %>
+<% end %>
