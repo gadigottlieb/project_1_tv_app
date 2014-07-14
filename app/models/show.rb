@@ -5,4 +5,5 @@ class Show < ActiveRecord::Base
   has_many :seasons
 
   validates_presence_of :title, :genre, :network
+  validates_uniqueness_of :title
 end
