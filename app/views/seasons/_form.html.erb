@@ -1,0 +1,17 @@
+<%= form_for @season do |f| %>
+
+  <%= f.label :show_id, "Title" %>
+  <%= f.select :show_id, options_for_select(@shows.map {|show| [show.title, show.id]}) %>
+
+  <%= f.label :season_number %>
+  <%= f.number_field :season_number %>
+
+  <%= f.label :air_date %>
+  <%= f.date_field :air_date %>
+
+  <%= f.label :poster_path %>
+  <%= f.text_field :poster_path %>
+
+  <%= f.submit %>
+
+<% end %>

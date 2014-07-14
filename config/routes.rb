@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # User, Shows Routes
   resources :shows do
     get 'search', on: :collection # Searches The Movie Db website
-    post 'add_new' => 'shows#add_new', as: 'new_show_by_id'
   end
+    post 'add_new' => 'add_new', as: 'new_show_by_id'
 
   resources :actors do
     get 'search', on: :collection # Searches The Movie Db website
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     post 'favorite', on: :member
   end
 
-  resources :favorites
+  resources :favorites, :seasons
 
   # get 'users/:id/favorites' => 'users#favorites', as: 'favorites'
 

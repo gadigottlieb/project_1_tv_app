@@ -10,11 +10,12 @@
 <h2>Favorite Shows</h2>
 <%= link_to "Add Favorite Show", new_favorite_path %>
 <ol>
-  <% @user.favorites.each do |favorite| %>
-    <li><%= link_to favorite.show.title, favorite_path(favorite) %></li>
-    <ul>
-      <li><%= favorite.comment %></li>
-      <li><%= favorite.rating %></li>
-    </ul>
-  <% end %>
+    <% @user.favorites.each do |favorite| %>
+      <hr>
+      <li>TV Show: <%= link_to favorite.show.title, favorite_path(favorite) %></li>
+      <ul>
+        <li> Comment: <%= favorite.comment %></li>
+        <li> Rating: <%= favorite.rating %></li>
+      </ul>
+    <% end %>
 </ol>

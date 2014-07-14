@@ -1,10 +1,14 @@
 Project 1 - TV_App
 
-I would like to create a TV app where users can search TV shows, by Title, browse
-through seasons, and even their episodes. I would also like for users to add shows
-to their wish list. Furthermore, I would like for users to be able to comment on
-a show and leave their reviews.
+With the use of this app, users can search TV shows, by Title and add them to
+ the database. After the show has been added, they can add the show to their favorites.
+  The favorites will show up on the user's profile page. When adding to favorites,
+  the user can add a comment to the show and rate the show.
 
+ TV shows Seasons, Episodes, and Actors coming soon!
+
+Link to the gem themoviedb
+https://github.com/ahmetabdi/themoviedb
 
 Link to my user board on Trello
 https://trello.com/b/j2BYqKXd/project-1-tv-app
@@ -13,4 +17,4 @@ Link to my drawn out ERDs
 https://www.lucidchart.com/documents/edit/af88ad54-c8b6-42f0-a13f-d759ec9f85aa/0
 
 Link to Heroku
-http://tv-talkandshare.herokuapp.com/
+http://young-eyrie-8246.herokuapp.com/

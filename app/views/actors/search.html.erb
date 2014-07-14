@@ -7,7 +7,12 @@
   </p>
   <% profile_path = actor["profile_path"] %>
   <%= image_tag "#{@base_url}/#{@poster_sizes[3]}#{profile_path}" %>
+
+  <%= form_tag('/actors', method: :post) do |f| %>
+    <%= hidden_field_tag 'actor[:name]', actor['name'] %>
+    <%= hidden_field_tag 'actor[:character]', actor['character'] %>
+    <%= hidden_field_tag 'actor[:profile_path]', actor['profile_path'] %>
+    <%= button_to "Add Actor"%>
+  <% end %>
 <% end %>
 </ol>
-
-<%= button_to "Add Actors", new_actor_path %>

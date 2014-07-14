@@ -1,25 +1,45 @@
 <h2>TV Show</h2>
-
-<h2>Title: <%= title = @results.name %></h2>
+<%= link_to "Back", shows_path(@shows) %>
+<h2>Title: <%= @results.name %></h2>
 
 <% poster_path = @results.poster_path %>
-<%= image_url = image_tag "#{@base_url}/#{@poster_sizes[3]}#{poster_path}" %>
+<%= image_tag "#{@base_url}/#{@poster_sizes[3]}#{poster_path}" %>
 
 <p>
-  <strong>First Air Date:</strong> <%= first_air_date = @results.first_air_date %>
+  <strong>First Air Date:</strong> <%= @results.first_air_date %>
 </p>
 
 <p>
-  <strong>Plot:</strong> <%= plot = @results.overview %>
+  <strong>Plot:</strong> <%= @results.overview %>
 </p>
 
 <p>
-  <strong>Genre:</strong> <%= genre = @results.genres[0]["name"] %>
+  <strong>Genre:</strong> <%= @results.genres[0]["name"] %>
 </p>
 
 <p>
-  <strong>Network:</strong> <%= network = @results.networks[0]["name"] %>
+  <strong>Network:</strong> <%= @results.networks[0]["name"] %>
 </p>
-<%= form_tag('shows/new', method: :post) do |f| %>
+
+<p>
+  <strong>Seasons:</strong>
+  <% @results.seasons.map do |season| %>
+      <p>
+        Season Number: <%= season["season_number"] %>
+      </p>
+      <p>Air Date:
+        <%= season["air_date"] %>
+      </p>
+      <%= image_tag "#{@base_url}/#{@poster_sizes[3]}#{season["poster_path"]}" %>
+  <% end %>
+</p>
+
+<%= form_tag('/shows', method: :post) do |f| %>
+  <%= hidden_field_tag("show[title]", @results.name) %>
+  <%= hidden_field_tag("show[image_url]", "#{@base_url}/#{@poster_sizes[3]}#{@results.poster_path}" )%>
+  <%= hidden_field_tag("show[first_air_date]", @results.first_air_date) %>
+  <%= hidden_field_tag("show[plot]", @results.overview) %>
+  <%= hidden_field_tag("show[genre]", @results.genres[0]["name"]) %>
+  <%= hidden_field_tag("show[network]", @results.networks[0]["name"]) %>
   <%= button_to "Add TV Show" %>
 <% end %>

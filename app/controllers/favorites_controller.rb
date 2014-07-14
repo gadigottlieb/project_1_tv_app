@@ -41,8 +41,9 @@ class FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find(params[:id])
+    @user = @favorite.user
     if @favorite.destroy
-      redirect_to favorites_path
+      redirect_to user_path(@user)
     else
       redirect_to favorite_path(@favorite)
     end

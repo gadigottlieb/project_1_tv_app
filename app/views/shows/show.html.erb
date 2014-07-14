@@ -1,5 +1,6 @@
 <h1><%= @show.title %></h1>
 <%= link_to "Edit", edit_show_path %><br>
+<%= link_to "Add Favorite", new_favorite_path %>
 <%= image_tag(@show.image_url) %>
 <h3>Air Date: </h3> <%= @show.first_air_date %>
 <h3>Genre: </h3> <%= @show.genre %>
@@ -8,6 +9,12 @@
 <p>
   <%= @show.plot %>
 </p>
+<h3>Seasons:</h3>
+<ol>
+  <% @show.seasons.each do |season| %>
+    <li><%= link_to season.season_number, season_path %></li>
+    <% end %>
+</ol>
 <h3>Actors:</h3>
 <ol>
   <% @show.actors.each do |actor| %>
