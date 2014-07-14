@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-  background-image: asset-url("http://subtlepatterns.com/patterns/food.png");
+  background-image: url("http://subtlepatterns.com/patterns/food.png");
   background-repeat: repeat;
   text-align: center;
 }
