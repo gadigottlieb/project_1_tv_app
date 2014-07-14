@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>TV App</h1>
   <p>
   <% if session[:current_user] %>
     Welcome back, <%= User.find(session[:current_user]).first_name %>! |
