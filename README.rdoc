@@ -1,9 +1,6 @@
 Project 1 - TV_App
 
-With the use of this app, users can search TV shows, by Title and add them to
- the database. After the show has been added, they can add the show to their favorites.
-  The favorites will show up on the user's profile page. When adding to favorites,
-  the user can add a comment to the show and rate the show.
+With the use of this app, users can search TV shows, by Title and add them to the database. After the show has been added, they can add the show to their favorites. The favorites will show up on the user's profile page. When adding to favorites, the user can add a comment to the show and rate the show.
 
  TV shows Seasons, Episodes, and Actors coming soon!
 
